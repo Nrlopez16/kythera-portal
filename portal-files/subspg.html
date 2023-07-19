@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kythera Portal</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+      :root {
+        --textGreyLight: #6D6D6D;
+        --black: #181818;
+        --textGreyDark: #373737;
+        --bodyGrey: #DDDDDD;
+        --white: #ffffff;
+        --orange: #E9A35B;
+      }
+      body {
+        width: 100vw;
+        background: var(--bodyGrey);
+      }
+      .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        background: var(--white);
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+      }
+      .logo-cont{
+        background: var(--orange);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .kythera-logo{
+        background: var(--orange);
+        width: 200px;
+      }
+      .header-route-container{
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-route-container > ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .header-route-container > ul > li{
+        margin-right: 30px;
+      }
+      .header-route-container > ul > li:last-of-type{
+        margin-right: 50px;
+      }
+      .active{
+        font-weight: 700;
+        text-decoration: underline 3px #e9a35b;
+      }
+      .help-button{
+        background: var(--orange);
+        font-weight: 700;
+        border-radius: 20px;
+        padding: 8px 20px;
+        text-align: center;
+        margin-right: 20px;
+      }
+      .title-row{
+        width: 85vw;
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .title{
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--textGreyLight);
+      }
+      .hotlink{
+        color: var(--orange);
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      .subs-container{
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:center;
+      }
+      .subs-container > div{
+        background: var(--orange);
+        width: 27.5vw;
+        color: var(--textGreyLight);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-shadow: 0px 2px 2px rgba(10,10,10,0.12);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .subs-container > div:nth-of-type(2){
+        margin: 0 20px;
+      }
+      .sub-title{
+        margin: auto;
+        font-weight: 700;
+        font-size: 1.2vw;
+        padding: 16px 0;
+        color: var(--black);
+      }
+      .sub-info{
+        background: var(--white);
+        width: 100%;
+        text-align: left;
+        padding: 10px 10px;
+      }
+      .sub-info > p {
+        padding-bottom: 4px;
+      }
+      .sub-identity{
+        color: var(--black);
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      .highlight{
+        color: var(--orange);
+      }
+      
+      @media screen and (max-width: 1024px) {
+      .header-route-container > ul > li{
+        margin-right: 20px;
+        font-size: 14px;
+      }
+      .header-route-container > ul > li:last-of-type{
+        margin-right: 30px;
+      }
+      .help-button{
+        padding: 8px 24px;
+        font-size: 14px;
+      }
+    .subs-container > div{
+        width: 27vw;
+        }
+      .sub-title{
+        font-size: 16px;
+        padding: 16px 0;
+      }
+      .sub-info{
+        padding: 10px 10px;
+      }
+      .sub-info > p {
+        padding-bottom: 2px;
+        font-size: 11px;
+      }
+      }
+      @media screen and (max-width: 768px) {
+      .kythera-logo{
+        background: var(--orange);
+        width: 160px;
+      }
+      .header-route-container > ul > li{
+        margin-right: 20px;
+        font-size: 1.8vw;
+      }
+      .header-route-container > ul > li:last-of-type{
+        margin-right: 30px;
+      }
+      .help-button{
+        padding: 8px 24px;
+        font-size: 1.8vw;
+      }
+      .title-row{
+        width: 92vw;
+      }
+        .subs-container > div{
+            width: 29vw;
+        }
+      .sub-title{
+        font-size: 16px;
+        padding: 16px 0;
+      }
+      .sub-info{
+        padding: 10px 10px;
+      }
+      .sub-info > p {
+        padding-bottom: 2px;
+        font-size: 11px;
+      }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- page-one -->
+    <div class="wrapper">
+
+      <header>
+        <div
+        class="logo-cont">
+        <img
+        class="kythera-logo"
+        src="data:image/png;base64,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"
+         /></div>
+      <div class="header-route-container">
+      <ul>
+        <li class="link active">HOME</li>
+        <li class="link">PRODUCTS</li>
+        <li class="link">CASES</li>
+      </ul>
+      <div class="help-button">Get Help</div>
+    </div>
+      </header>
+
+      
+      <div class="title-row">
+        <span class="title">Active Subscriptions</span>
+        <span class="hotlink"></span>
+      </div>
+      <div class="subs-container">
+        <div>
+            <p class="sub-title">Surgical Events</p>
+            <div class="sub-info">
+            <p class="sub-identity">Product Name:<span> Sample</span></p>
+            <p>Data Provider: <span> Sample</span></p>
+            <p>Databricks Instance: <span> Sample</span></p>
+            <p>Databricks Ord ID: <span> 012345</span></p>
+            <p>Data Start Range: <span> 01/23/23</span></p>
+            <p>Data Stop Range: <span> 01/23/23</span></p>
+            <p>Central License<span> 192019</span></p>
+            <p>User Email: <span class="highlight"> SampleUserID123</span></p>
+            <p>Active: <span class="highlight"> True</span></p>
+        </div>
+        </div>
+        <div>
+            <p class="sub-title">Chronic Conditions</p>
+            <div class="sub-info">
+            <p class="sub-identity">License<span> 192019</span></p>
+            <p>Activation Date: <span> 01/23/23</span></p>
+            <p>Status: <span> Active</span></p>
+            <p>Attached User: <span class="highlight"> SampleUserID123</span></p>
+            <p>WorkSpace URL: <span class="highlight"> https://www.kytheralabs.com/</span></p>
+        </div>
+        </div>
+        <div>
+            <p class="sub-title">Oncology Cases</p>
+            <div class="sub-info">
+            <p class="sub-identity">License<span> 172739</span></p>
+            <p>Activation Date: <span> 11/04/22</span></p>
+            <p>Status: <span> Expired</span></p>
+            <p>Attached User: <span class="highlight"> SampleUserID123</span></p>
+            <p>WorkSpace URL: <span class="highlight"> https://www.kytheralabs.com/</span></p>
+        </div>
+        </div>
+      </div>
+      
+      
+      <div class="title-row">
+        <span class="title">Inactive Subscriptions</span>
+        <span class="hotlink"></span>
+      </div>
+      <div class="subs-container">
+        <div>
+            <p class="sub-title">Surgical Events</p>
+            <div class="sub-info">
+            <p class="sub-identity">License<span> 204312</span></p>
+            <p>Activation Date: <span> 06/22/23</span></p>
+            <p>Status: <span> Active</span></p>
+            <p>Attached User: <span class="highlight"> SampleUserID123</span></p>
+            <p>WorkSpace URL: <span class="highlight"> https://www.kytheralabs.com/</span></p>
+        </div>
+        </div>
+        <div>
+            <p class="sub-title">Chronic Conditions</p>
+            <div class="sub-info">
+            <p class="sub-identity">License<span> 192019</span></p>
+            <p>Activation Date: <span> 01/23/23</span></p>
+            <p>Status: <span> Active</span></p>
+            <p>Attached User: <span class="highlight"> SampleUserID123</span></p>
+            <p>WorkSpace URL: <span class="highlight"> https://www.kytheralabs.com/</span></p>
+        </div>
+        </div>
+        <div>
+            <p class="sub-title">Oncology Cases</p>
+            <div class="sub-info">
+            <p class="sub-identity">License<span> 172739</span></p>
+            <p>Activation Date: <span> 11/04/22</span></p>
+            <p>Status: <span> Expired</span></p>
+            <p>Attached User: <span class="highlight"> SampleUserID123</span></p>
+            <p>WorkSpace URL: <span class="highlight"> https://www.kytheralabs.com/</span></p>
+        </div>
+        </div>
+      </div>
+      
+
+      
+    </div>
+  </body>
+</html>
