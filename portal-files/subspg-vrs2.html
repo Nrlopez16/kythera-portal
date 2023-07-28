@@ -248,22 +248,76 @@
         padding: 8px 24px;
         font-size: 1.8vw;
       }
+      .tableau-row{
+        width: 92vw;
+        height: 28vw;
+      }
       .title-row{
         width: 92vw;
       }
-        .subs-container > div{
+        .subs-container{
+            width: 92vw;
+        }
+        .subs-container > table{
+            width: 100%;
+        }
+        .interests-container > div{
             width: 29vw;
         }
-      .sub-title{
-        font-size: 16px;
+      .interest-title{
+        font-size: 14px;
         padding: 16px 0;
       }
-      .sub-info{
+      .interest-info{
         padding: 10px 10px;
       }
-      .sub-info > p {
+      .interest-info > p {
         padding-bottom: 2px;
         font-size: 11px;
+      }
+      }
+      @media screen and (max-width: 600px) {
+        
+      .interest-title{
+        font-size: 2vw;
+        padding: 12px 0 8px 0;
+      }
+      .interest-info{
+        padding: 6px;
+      }
+      .interest-info > p {
+        font-size: 1.4vw;
+      }
+      .sub-button{
+        font-size: 1.4vw;
+        padding: 6px 16px;
+        width: 70px;
+      }
+        }
+      @media screen and (max-width: 430px) {
+        .kythera-logo{
+          width: 140px;
+        }
+        .header-route-container > ul{
+          padding-left: 10px;
+        }
+        .help-button{
+          padding: 8px 12px;
+        }
+        .totals-box{
+          padding: 10px 16px;
+        }
+        .title-row{
+          margin-top: 30px;
+        }
+      .title{
+        font-size: 14px;
+      }
+      .interests-container > div{
+        width: 30vw;
+      }
+      .interests-container > div:nth-of-type(2){
+        margin: 0 8px;
       }
       }
 
